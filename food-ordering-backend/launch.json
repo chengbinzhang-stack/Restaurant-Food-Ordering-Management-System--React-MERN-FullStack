@@ -1,0 +1,20 @@
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug npm run dev",
+  "runtimeExecutable": "npm",
+  "runtimeArgs": [
+    "run",
+    "dev"
+  ],
+"port": 9229,
+"configurations": [
+    
+{
+    "command": "npm start",
+    "name": "Run npm start",
+    "request": "launch",
+    "type": "node-terminal"
+}
+]
+}

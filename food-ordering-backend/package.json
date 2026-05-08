@@ -8,7 +8,7 @@
     "dev:no-stripe": "nodemon",
     "stripe": "stripe listen --forward-to localhost:5000/api/order/checkout/webhook",
     "build": "npm install && npx tsc",
-    "start": "NODE_OPTIONS=--openssl-legacy-providernode dist/index.js"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node dist/index.js"
   },
   "keywords": [],
   "author": "",

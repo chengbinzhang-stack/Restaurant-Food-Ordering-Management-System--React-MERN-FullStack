@@ -10,7 +10,7 @@ const getCurrentUser = async (req: Request, res: Response) => {
 
     res.json(currentUser);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return res.status(500).json({ message: "Something went wrong" });
   }
 };
@@ -23,7 +23,7 @@ const createCurrentUser = async (req: Request, res: Response) => {
     }
     res.status(404).json({ message: "User not found" });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "Error creating user" });
   }
 };
@@ -46,7 +46,7 @@ const updateCurrentUser = async (req: Request, res: Response) => {
 
     res.send(user);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "Error updating user" });
   }
 };

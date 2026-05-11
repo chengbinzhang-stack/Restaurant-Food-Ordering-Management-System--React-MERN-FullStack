@@ -21,7 +21,7 @@ const getRestaurant = async (req: Request, res: Response) => {
 
     res.json(restaurant);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "something went wrong" });
   }
 };
@@ -78,7 +78,7 @@ const searchRestaurant = async (req: Request, res: Response) => {
 
     res.json(response);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "Something went wrong" });
   }
 };
@@ -89,7 +89,7 @@ const getAllCities = async (req: Request, res: Response) => {
     const cities = await Restaurant.distinct("city");
     res.json({ cities });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "Something went wrong" });
   }
 };

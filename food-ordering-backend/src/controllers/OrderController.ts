@@ -26,7 +26,7 @@ const getMyOrders = async (req: Request, res: Response) => {
 
     res.json(orders);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "something went wrong" });
   }
 };
@@ -57,7 +57,7 @@ const stripeWebhookHandler = async (req: Request, res: Response) => {
       STRIPE_ENDPOINT_SECRET
     );
   } catch (error: any) {
-    console.log(error);
+    console.error(error);
     return res.status(400).send(`Webhook error: ${error.message}`);
   }
 
@@ -149,7 +149,7 @@ const createCheckoutSession = async (req: Request, res: Response) => {
     await newOrder.save();
     res.json({ url: session.url });
   } catch (error: any) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: error.raw.message });
   }
 };

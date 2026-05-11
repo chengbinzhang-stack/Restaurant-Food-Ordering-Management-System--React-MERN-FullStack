@@ -50,7 +50,7 @@ const createMyRestaurant = async (req: Request, res: Response) => {
 
     res.status(201).send(restaurant);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "Something went wrong" });
   }
 };
@@ -111,7 +111,7 @@ const getMyRestaurantOrders = async (req: Request, res: Response) => {
 
     res.json(orders);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "something went wrong" });
   }
 };
@@ -144,7 +144,7 @@ const updateOrderStatus = async (req: Request, res: Response) => {
 
     res.status(200).json(order);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ message: "unable to update order status" });
   }
 };

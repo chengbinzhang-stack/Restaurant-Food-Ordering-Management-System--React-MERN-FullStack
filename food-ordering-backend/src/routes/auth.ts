@@ -127,7 +127,7 @@ router.post(
         user: { id: user._id, email: user.email, name: user.name },
       });
     } catch (error) {
-      console.log(error);
+      console.error(error);
       res.status(500).json({ message: "Something went wrong" });
     }
   }
@@ -175,7 +175,7 @@ router.post(
         },
       });
     } catch (error) {
-      console.log(error);
+      console.error(error);
       res.status(500).json({ message: "Something went wrong" });
     }
   }

@@ -31,6 +31,7 @@ app.use(
       process.env.FRONTEND_URL,
       "http://localhost:5173",
       "http://localhost:3000",
+      "https://restaurant-food-ordering-management.vercel.app",
       "https://mern-food-ordering.netlify.app",
       "https://mern-food-ordering-hnql.onrender.com",
     ].filter((o): o is string => Boolean(o)),

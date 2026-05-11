@@ -29,7 +29,7 @@ const verifyToken = (req: Request, res: Response, next: NextFunction) => {
     const decoded = jwtDecode(token); 
     //jwt.verify(token, process.env.JWT_SECRET_KEY as string);
     console.error(decoded);
-    req.userId = String(decoded.sub);
+    req.userId = String(decoded.userId);
     next();
   } catch {
     return res.status(401).json({ message: "unauthorized" });
